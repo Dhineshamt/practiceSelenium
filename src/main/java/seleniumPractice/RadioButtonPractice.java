@@ -31,15 +31,37 @@ public class RadioButtonPractice {
 
 			}
 
-			// Get list of all the radio buttons
+			// Get list of all the radio buttons using Xpath
 			List<WebElement> radioButtons = driver.findElementsByXPath("//input[@type='radio' and @name='gender']");
-			System.out.println(radioButtons.size());
 
+			//To click the button which has the value Other
 			for (WebElement radioButton : radioButtons) {
 				if (radioButton.getAttribute("value").equalsIgnoreCase("Other")) {
 					radioButton.click();
 				}
 			}
+			
+			/*
+			 * To practice isSelected method
+			 * Check the selected radio button value is 'Other'. If yes, click radio button with the value 'Female'
+			 * 
+			 */
+			String radioButtonValue;
+			for(WebElement radioButtonClick: radioButtons) {
+				if(radioButtonClick.getAttribute("value").equalsIgnoreCase("Other") && radioButtonClick.isSelected()) {
+					
+						radioButtonValue = radioButtons.get(1).getAttribute("value");
+						
+						if(radioButtonValue.equalsIgnoreCase("Female")) {
+							radioButtons.get(1).click();
+						}
+					
+				}
+			}
+			
+			
+			
+			
 		} catch (NoSuchElementException e) {
 
 		} catch (WebDriverException e) {
