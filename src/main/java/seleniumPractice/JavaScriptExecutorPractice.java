@@ -18,7 +18,7 @@ public class JavaScriptExecutorPractice {
 		js.executeScript("document.getElementById('login-password').value = 'Vishnu@12';");
 
 		// Code to click a button using JavascriptExecutor
-		WebElement elmt = driver.findElementById("login-submit");
+		WebElement elmt = driver.findElementByLinkText("Forgot password?");
 		js.executeScript("arguments[0].click();", elmt);
 	}
 }
