@@ -20,5 +20,7 @@ public class JavaScriptExecutorPractice {
 		// Code to click a button using JavascriptExecutor
 		WebElement elmt = driver.findElementByLinkText("Forgot password?");
 		js.executeScript("arguments[0].click();", elmt);
+		
+		js.equals("");
 	}
 }
