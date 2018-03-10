@@ -21,6 +21,6 @@ public class JavaScriptExecutorPractice {
 		WebElement elmt = driver.findElementByLinkText("Forgot password?");
 		js.executeScript("arguments[0].click();", elmt);
 		
-		js.equals("");
+		
 	}
 }
