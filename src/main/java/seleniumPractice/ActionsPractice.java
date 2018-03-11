@@ -12,7 +12,7 @@ import util.LaunchPageInChrome;
 public class ActionsPractice {
 
 	public static void main(String[] args) {
-
+		//
 		WebElement userID, password, submit;
 		try {
 			ChromeDriver driver = LaunchPageInChrome.LaunchPage("https://www.linkedin.com");
@@ -34,6 +34,10 @@ public class ActionsPractice {
 		} catch (WebDriverException e) {
 
 		}
+		
+		
+		
+		
 
 	}
 
