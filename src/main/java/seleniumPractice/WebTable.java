@@ -19,11 +19,27 @@ public class WebTable {
 
 		List<WebElement> rows = table.findElements(By.tagName("tr"));
 
+		//Using For loop
 		for (int i = 0; i < rows.size(); i++) {
 			List<WebElement> columns = rows.get(i).findElements(By.tagName("td"));
 
 			for (int j = 0; j < columns.size(); j++) {
 				System.out.println(columns.get(j).getText());
+			}
+		}
+		
+		
+		//Using For Each
+		for(WebElement row: rows) {
+			List<WebElement> headers = row.findElements(By.tagName("th"));
+			List<WebElement> columns = row.findElements(By.tagName("td"));
+			
+			for(WebElement header: headers) {
+				System.out.println(header.getText());
+			}
+			
+			for(WebElement column: columns) {
+				System.out.println(column.getText());
 			}
 		}
 
