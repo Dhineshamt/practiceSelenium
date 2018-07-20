@@ -27,6 +27,7 @@ public class ActionsPractice {
 
 			login.perform();
 		} catch (WebDriverException e) {
+			System.out.println("Dhinesh");
 
 		}
 	}
